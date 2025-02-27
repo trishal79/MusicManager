@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Music Playlist Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav class="fixed-navbar adjusted-width">
+    <ul class="navbar centered">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="adjust-header">
+    <h1 class="gradient-text">My Music Playlist Manager</h1>
+  </header>
+
+  <section class="search-section">
+    <input type="text" id="search-input" placeholder="Search by title, artist, or album..."/>
+  </section>
+
+  <section class="playlist-section">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th class="sortable" data-column="title">Title <span class="arrow subtle">▲</span></th>
+          <th class="sortable" data-column="artist">Artist <span class="arrow subtle">▲</span></th>
+          <th class="sortable" data-column="album">Album <span class="arrow subtle">▲</span></th>
+          <th class="sortable" data-column="duration">Duration <span class="arrow subtle">▲</span></th>
+        </tr>
+      </thead>
+      <tbody id="playlist-body"></tbody>
+    </table>
+  </section>
+
+  <section class="add-song-section">
+    <!-- Toggling text from ➕ to ✖ for the form toggle -->
+    <h2 id="toggle-form">➕ Add a Song</h2>
+    <form id="add-song-form" class="hidden">
+      <input type="text" id="title" placeholder="Song Title" required />
+      <input type="text" id="artist" placeholder="Artist" required />
+      <input type="text" id="album" placeholder="Album" required />
+      <input type="text" id="duration" placeholder="Duration (e.g., 3:45)" required />
+      <button type="button" id="add-song-btn">Add Song</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>🎵 Created by Trishal Srivastava & Sulav Neupane | All rights reserved © 2025</p>
+  </footer>
+</body>
+</html>
